@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+<h1>Calculadora</h1>
+<style>
+    body{
+        text-align: center;
+        background-color: rgb(14, 196, 228);
+        font-size: 15px;
+    }
+</style>
+    <form>
+        <p><label>Valor1:</label></p>
+        <input type="number" id="valor1"/>
+
+        <p><label>Valor2:</label></p>
+        <input type="number" id="valor2"/>
+        <p>
+        <input type="button" onclick="somar()" value="Somar"/>
+        <input type="button" value="Subtrair"/>
+        <input type="button" value="Multiplicar"/>
+        <input type="button" value="Dividir"/>
+    </form>
+    <script tyoe="text/javascript">
+        function somar(){
+        var valor1= Number(document.getElementById("valor1").value);
+        var valor2= Number(document.getElementById("valor2").value);
+        var soma = valor1 + valor2;
+        alert(soma);
+}
+    </script>
+</body>
+</html>

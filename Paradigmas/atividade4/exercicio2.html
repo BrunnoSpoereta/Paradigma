@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body align="center">
+    <form>
+        <p>
+            <font face="Arial">
+            <label>Nome:</label></br>
+            <input type="text" id="nome">
+            </font>
+        </p>
+        <p>
+            <font face="Arial">
+            <label>Email:</label></br>
+            <input type="text" id="email">
+            </font>
+        </p>
+        <p>
+            <font face="Arial">
+            <label>Telefone:</label></br>
+            <input type="text" id="telefone">
+            </font>
+        </p>
+        <p>
+            <font face="Arial">
+            <label>Idade:</label></br>
+            <input type="text" id="idade">
+            </font>
+        </p>
+        <p> 
+            <font face="Arial">
+            <label>Cidade:</label></br>
+            <input type="text" id="cidade">
+            </font>
+        </p>
+        <p>
+            
+            <button onclick="validar()">Enviar</button>
+        </p>
+    </form>
+    <script type="text/javascript">
+        function validar(){
+            var resultado = true;
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var telefone = document.getElementById('telefone').value;
+            var idade = document.getElementById('idade').value;
+            var cidade = document.getElementById('cidade').value;
+            
+            if(nome == ""){
+                resultado = false;
+                alert("O campo Nome não foi preenchido")
+            }
+            if(email == ""){
+                resultado = false;
+                alert("O campo email não foi preenchido")
+            }
+            if(telefone == ""){
+                resultado = false;
+                alert("O campo telefone não foi preenchido")
+            }
+            if(idade == ""){
+                resultado = false;
+                alert("O campo idade não foi preenchido")
+            }
+            if(cidade == ""){
+                resultado = false;
+                alert("O campo cidade não foi preenchido")
+            }
+            if(resultado == true){
+                alert("Cadastro efeetuado com sucesso!")
+            }
+        }
+        
+
+    </script>
+    
+</body>
+</html>

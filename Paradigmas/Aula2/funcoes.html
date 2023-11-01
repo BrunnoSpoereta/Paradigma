@@ -1,0 +1,56 @@
+! <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes</title>
+        <script type = 'text/javascript'>
+            // function sem parametros
+            //instruçoes
+            function ola(){
+                document.write('Aula de JAVASCRIPT');
+            }
+            //ola();
+
+            //function com parametros
+            function escrevaNaTela(valor){
+                document.write(valor);
+                
+            }
+            //escrevaNaTela('Joao');
+            //escrevaNaTela(100);
+            
+            //fuction com retorno
+            function somar(valorA, valorB){
+                return valorA + valorB
+            
+            }
+            
+        
+            //EXERCICIO
+            // Crie uma funçao denominada "apresentar"
+            //que receba dois valores
+            //em seguida, deve-se escrever na tela a junçao dos dois valores
+            
+            function apresentar(valor1, valor2)
+            {
+                escrevaNaTela(somar(valor1,valor2));
+            }
+             //apresentar('A','B');
+
+             //exercicio
+             //escrever na tela o resultado da soma de dois
+             //valores informados pelo usuario
+             var valor1 = Number(prompt('escolha um valor'))
+             var valor2 = Number(prompt('escolha outro valor'))
+             escrevaNaTela(somar(valor1,valor2))
+            
+
+
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

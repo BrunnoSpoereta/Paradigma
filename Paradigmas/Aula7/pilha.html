@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilha</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        const MAX = 5;
+        var base = 0, topo = 0
+        var pilha = [];
+
+        // identifica se a pilha esta vazia
+        function p_vazia(){
+            return(base == topo);
+        }
+
+        // identifica se a pilha esta cheia
+        function p_cheia(){
+            return(topo == MAX);
+        }
+
+        //adiciona um item na pilha
+        function empilhar(valor){
+            if(!p_cheia()){// se a pilha nao estiver cheia (! negaçao)
+                pilha[topo] = valor;
+                topo++;// topo = topo + 1
+                console.log(`o valor ${valor} foi empilhado`);
+                
+            }
+            else
+                console.log('PILHA CHEIA')
+        }
+        //remove um valor da pilha
+        function desempilhar(){
+            var valor_removido;
+            if(!p_vazia()){// se a pilha nao estiver vazia
+                valor_removido = pilha[topo -1];
+                topo--;
+                console.log(`o valor ${valor_removido} foi removido`)
+                return valor_removido;
+            }
+            else{
+                console.log('PILHA VAZIA!')
+                return -1;
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>

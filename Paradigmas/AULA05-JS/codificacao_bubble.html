@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificação Bubble</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function BubbleSort(){
+            //Objetivo: utilizar o método BubbleSort e apresentar
+            //todos os elementos ordenados.
+
+            var elementos = [10, 11, 15, 13, 9, 4, 18, 5, 14, 6];
+            var temp;
+
+            //varreduras
+            //-1 é para as varreduras não passarem da quantidade de containers se não vai acusar erro
+            
+            var start = performance.now(); // hora que inicia a execução
+
+            for(var i = 0; i < elementos.length - 1; i++ ){ //length pega quantos elementos existem no vetor
+                
+                //avalia cada item
+                for(var ord = 0; ord < elementos.length - 1; ord++) {
+
+                    if(elementos[ord] > elementos[ord + 1]){
+                        //efetua a troca
+                        temp = elementos[ord + 1];
+                        elementos[ord + 1] = elementos[ord];
+                        elementos[ord] = temp;
+
+
+                    }//mostra: elementos[0] (elemento na ordem 0) elementos[1] //... //elementos[9]
+                }
+            } //Esse for foi utilizado para percorrer todos os elementos do vetor
+
+            var end = performance.now(); // hora que termina a execução
+
+            console.log('Total de varreduras: ' + i)
+            console.log('O tempo de execução foi de: ' + (end-start)) // calcula o tempo e ms de duração do bubblesort
+            //apresentar resultado
+            for(var item of elementos){
+                console.log(item);
+            } // mostra as varreduras
+
+            
+        }
+
+        function BubbleSortOtimizado(){
+            //EXERCÍCIO: Finalizar a execução de varreduras quando nenhuma troca for realizada
+            //comando que pode ser utilizado para interromper execução de laço: break
+
+            var elementos = [10, 11, 15, 13, 9, 4, 18, 5, 14, 6];
+            var temp;
+
+            var start = performance.now(); 
+            var trocou = false; //variavel de controle para identificar trocas
+
+            for(var i = 0; i < elementos.length - 1; i++ ){ 
+                
+                trocou = false; //atualiza a váriavel de controle
+                
+                for(var ord = 0; ord < elementos.length - 1; ord++) {
+
+                    if(elementos[ord] > elementos[ord + 1]){
+                        //efetua a troca
+                        temp = elementos[ord + 1];
+                        elementos[ord + 1] = elementos[ord];
+                        elementos[ord] = temp;
+
+                        trocou = true; // ocorreu uma troca
+
+                    }
+                }
+
+                if (!trocou){ //ou trocou == false
+                    break;
+                } 
+        
+            }
+
+            var end = performance.now(); 
+
+            console.log('Total de varreduras: ' + i)
+            console.log('O tempo de execução foi de: ' + (end-start)) 
+            //apresentar resultado
+            for(var item of elementos){
+                console.log(item);
+            } // mostra as varreduras
+        }
+    
+    </script>
+    
+</body>
+</html>

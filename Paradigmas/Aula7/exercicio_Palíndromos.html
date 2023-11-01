@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromos</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        const MAX = 5;
+        var base = 0, topo = 0
+        var pilha = [];
+
+        function p_vazia(){
+            return(base == topo);
+        }
+
+        
+        function p_cheia(){
+            return(topo == MAX);
+        }
+
+        
+        function empilhar(valor){
+            if(!p_cheia()){
+                pilha[topo] = valor;
+                topo++;// topo = topo + 1
+                console.log(`o valor ${valor} foi empilhado`);
+                
+            }
+            else
+                console.log('PILHA CHEIA')
+        }
+        
+        function desempilhar(){
+            var valor_removido;
+            if(!p_vazia()){
+                valor_removido = pilha[topo -1];
+                topo--;
+                console.log(`o valor ${valor_removido} foi removido`)
+                return valor_removido;
+            }
+            else{
+                console.log('PILHA VAZIA!')
+                return -1;
+            }
+        
+        }
+        function identificar(){
+            var palavra = prompt('Informe uma palavra com letras')
+            
+            for(i = 0; i < MAX; i++){
+                empilhar(palavra[i])
+
+            }
+
+            novaPalavra = "";
+
+            for(i = MAX; i > 0; i--){
+                novaPalavra = novaPalavra + desempilhar();
+            }
+            var ePalindromo = novaPalavra == palavra
+            if(ePalindromo){
+                alert('A PALAVRA É UM PALINDROMO')
+            }
+            else{
+                alert('A PALAVRA NAO É UM PALINDROMO')
+            }
+
+        }
+
+    </script>
+</body>
+</html>

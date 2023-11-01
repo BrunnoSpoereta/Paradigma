@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <!-- Um estudante deseja participar de uma competição de matemática. Para que sua inscrição seja aprovada, é necessário que o estudante tenha frequência maior ou igual a 80%.
+    Será exibida a mensagem “Permitido” somente se a condição for satisfeita.-->
+    <form>
+        <label>Informe a Frequencia:</label>
+        <br/>
+        <input type="text" id="frequencia"/>
+        <br/>
+        <button onclick="verificarResultado()">Resultado</button>
+
+
+    </form>
+<script text="text/javascrip">
+         var num;
+        function verificarResultado(){
+            num = document.getElementById("frequencia").value;
+            if(num >= 80){
+                alert('Permitido')
+            }
+
+            
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<!--Leia a idade de uma pessoa e mostre se a pessoa já pode participar da festa quando tem 21 anos ou mais, ou que ainda não pode participar quando a condição não é atendida.-->
+<body>
+    <form>
+        <label>Digite sua idade:</label><br/>
+        <input type="text" id="idade"/><br/>
+        <input type="button" onclick="validarIdade()" value="Resultado"/>
+    </form>
+    <script text="text/javascrip">
+        
+        function validarIdade(){
+        var idade;
+        idade = document.getElementById('idade').value;
+        if(idade >= 21){
+            alert('Voce pode participar')
+        }else{
+            alert('voce nao pode participar')
+         }
+    }
+    
+    </script>
+    
+</body>
+</html>
